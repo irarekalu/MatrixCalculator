@@ -60,14 +60,14 @@ void onNumber(int **matr,int rows,int cols)
     dinamic(&matr,rows,cols);
     for(i=0;i<rows;i++){
         for(j=0;j<cols;j++){
-        	printf("Матрица:\n");
+            printf("Матрица:\n");
             for(k=0;k<rows;k++){
         	    for(l=0;l<cols;l++){
         		printf("[%d]  ",matr[k][l]);
-			    }
-			    printf("\n");
+		        }
+			printf("\n");
 	            }
-	            printf("Введите элемент матрицы: ");
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr[i][j]);
                 fflush(stdin);
                 system("cls");
@@ -87,24 +87,23 @@ void onNumber(int **matr,int rows,int cols)
             printf("\n");
             }
     getch();
-}
+    }
 
 //------------------------------------------------------------
 void sum(int **matr,int rows,int cols)
-	{   
-	int i,j,k,l,rows1,cols1;
-	int **matr1,**res;
+    {   
+    int i,j,k,l,rows1,cols1;
+    int **matr1,**res;
     inputRowsCols(&rows,&cols);
     dinamic(&matr,rows,cols);
- 
-     for(i=0;i<rows;i++){
+    for(i=0;i<rows;i++){
         for(j=0;j<cols;j++){
-        	printf("Матрица:\n");
+            printf("Матрица:\n");
             for(k=0;k<rows;k++){
-        	    for(l=0;l<cols;l++){
-        		printf("[%d]  ",matr[k][l]);
-			    }
-			    printf("\n");
+        	for(l=0;l<cols;l++){
+        	    printf("[%d]  ",matr[k][l]);
+		    }
+		    printf("\n");
 	            }
 	            printf("Введите элемент матрицы: ");
                 scanf("%d",&matr[i][j]);
@@ -112,29 +111,29 @@ void sum(int **matr,int rows,int cols)
                 }
     } 
     outputMatrix(matr,rows,cols);
-	//-------------------------------------------------
-	do{
-	 printf("Введите значение количества строк второй матрицы: ");
-            scanf("%d",&rows1);
-            fflush(stdin);
-            printf("Введите значение количества столбцов второй матрицы: ");
-            scanf("%d",&cols1);
-            fflush(stdin);
-            	if(cols!=cols1 || rows!=rows1 || rows1<=0 || cols1<=0) {
-				printf("Некоректно введеные даные! Повторите попытку!\n");
-			    }
-    }while(cols!=cols1 || rows!=rows1);
-    dinamic(&matr1,rows1,cols1);
+//-------------------------------------------------
+    do{
+   printf("Введите значение количества строк второй матрицы: ");
+   scanf("%d",&rows1);
+   fflush(stdin);
+   printf("Введите значение количества столбцов второй матрицы: ");
+   scanf("%d",&cols1);
+   fflush(stdin);
+   if(cols!=cols1 || rows!=rows1 || rows1<=0 || cols1<=0) {
+   printf("Некоректно введеные даные! Повторите попытку!\n");
+   }
+   }while(cols!=cols1 || rows!=rows1);
+   dinamic(&matr1,rows1,cols1);
      for(i=0;i<rows1;i++){
         for(j=0;j<cols1;j++){
-        	printf("Матрица:\n");
+            printf("Матрица:\n");
             for(k=0;k<rows1;k++){
         	    for(l=0;l<cols1;l++){
         		printf("[%d]  ",matr1[k][l]);
-			    }
-			    printf("\n");
-	            }
-	            printf("Введите элемент матрицы: ");
+		        }
+		        printf("\n");
+	                }
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr1[i][j]);
                 system("cls");
                 }
@@ -148,12 +147,11 @@ void sum(int **matr,int rows,int cols)
    	for(i=0;i<rows;i++){
 		for(j=0;j<cols;j++){
 			res[i][j]=matr[i][j]+matr1[i][j];
-				printf("%2d ",res[i][j]);
+			    printf("%2d ",res[i][j]);
 			    }
-				printf("\n");
+			    printf("\n");
 			    }
 }
-
 //----------------------------------------------------------
 void difference(int **matr,int rows,int cols)
 	{   
@@ -170,24 +168,23 @@ void difference(int **matr,int rows,int cols)
 			    }
 			    printf("\n");
 	            }
-	            printf("Введите элемент матрицы: ");
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr[i][j]);
                 system("cls");
                 }
     }
     outputMatrix(matr,rows,cols);
 	//--------------------------
-    do{
-	printf("Введите значение количества строк второй матрицы: ");
-            scanf("%d",&rows1);
-            printf("Введите значение количества столбцов второй матрицы: ");
-            scanf("%d",&cols1);
-            	if(cols!=cols1 || rows!=rows1 || rows1<=0 || cols1<=0) {
-				printf("Некоректно введеные даные! Повторите попытку!\n");
-			    }
-    }while(cols!=cols1 || rows!=rows1);
-    dinamic(&matr1,rows1,cols1);
-    for(i=0;i<rows1;i++){
+   do{
+   printf("Введите значение количества строк второй матрицы: ");
+   scanf("%d",&rows1);
+   printf("Введите значение количества столбцов второй матрицы: ");
+   scanf("%d",&cols1);
+   if(cols!=cols1 || rows!=rows1 || rows1<=0 || cols1<=0) {
+   printf("Некоректно введеные даные! Повторите попытку!\n");		    }
+   }while(cols!=cols1 || rows!=rows1);
+   dinamic(&matr1,rows1,cols1);
+   for(i=0;i<rows1;i++){
         for(j=0;j<cols1;j++){
         	printf("Матрица:\n");
             for(k=0;k<rows1;k++){
@@ -196,7 +193,7 @@ void difference(int **matr,int rows,int cols)
 			    }
 			    printf("\n");
 	            }
-	            printf("Введите элемент матрицы: ");
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr1[i][j]);
                 system("cls");
                 }
@@ -213,15 +210,14 @@ void difference(int **matr,int rows,int cols)
 			res[i][j]=matr[i][j]-matr1[i][j];
 				printf("%2d ",res[i][j]);
 			}
-				printf("\n");
+			printf("\n");
 			}
 }
-
 //--------------------------------------------------------------
 void multy(int **matr,int rows,int cols){
-	int i,j,k,l,rows1,cols1;
-	int **matr1,**res;
-	inputRowsCols(&rows,&cols);
+    int i,j,k,l,rows1,cols1;
+    int **matr1,**res;
+    inputRowsCols(&rows,&cols);
     dinamic(&matr,rows,cols);
     for(i=0;i<rows;i++){
         for(j=0;j<cols;j++){
@@ -232,7 +228,7 @@ void multy(int **matr,int rows,int cols){
 			    }
 			    printf("\n");
 	            }
-	            printf("Введите элемент матрицы: ");
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr[i][j]);
                 system("cls");
                 }
@@ -240,13 +236,13 @@ void multy(int **matr,int rows,int cols){
     outputMatrix(matr,rows,cols);
 	//-------------------------------------------------
     do{
-	        printf("Введите значение количества строк второй матрицы: ");
-            scanf("%d",&rows1);
-            printf("Введите значение количества столбцов второй матрицы: ");
-            scanf("%d",&cols1);
-            if(cols!=rows1 || rows1<=0 || cols1<=0) {
-			printf("Некоректно введеные даные! Повторите попытку!\n");
-			}
+       printf("Введите значение количества строк второй матрицы: ");
+       scanf("%d",&rows1);
+       printf("Введите значение количества столбцов второй матрицы: ");
+       scanf("%d",&cols1);
+       if(cols!=rows1 || rows1<=0 || cols1<=0) {
+       printf("Некоректно введеные даные! Повторите попытку!\n");
+    }
     }while(cols!=rows1);
     dinamic(&matr1,rows1,cols1);
     for(i=0;i<rows1;i++){
@@ -283,8 +279,8 @@ void multy(int **matr,int rows,int cols){
 //--------------------------------------------
 void transponovana(int **matr,int rows,int cols)
 {
-	int i,j,k,l,rows1,cols1;
-	int **res;
+    int i,j,k,l,rows1,cols1;
+    int **res;
     inputRowsCols(&rows,&cols);
     dinamic(&matr,rows,cols);
     for(i=0;i<rows;i++){
@@ -296,15 +292,15 @@ void transponovana(int **matr,int rows,int cols)
 			    }
 			    printf("\n");
 	            }
-	            printf("Введите элемент матрицы: ");
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr[i][j]);
                 system("cls");
                 }
     }
     outputMatrix(matr,rows,cols);
     dinamic(&res,cols,rows);
-	 for(i=0;i<rows;i++){
-        for(j=0;j<cols;j++){
+	for(i=0;i<rows;i++){
+            for(j=0;j<cols;j++){
         	res[j][i]=matr[i][j];
         }
     }
@@ -330,11 +326,10 @@ void determinant(int **matr,int rows,int cols){   //òîëüêî äëÿ 2íà2 3
             fflush(stdin);
             if(cols>=4 || rows >=4){
 	            printf("Мы пока что не готовы решить эту задачу! Но мы работаем над этим! Приносим свои извинения :)");
-				getch();
-				return;
-	        }
+		    getch();
+		    return;
+    }
     }while((rows!=cols) || rows<=0 || cols<=0);
-    
     dinamic(&matr,rows,cols);
     for(i=0;i<rows;i++){
         for(j=0;j<cols;j++){
@@ -345,7 +340,7 @@ void determinant(int **matr,int rows,int cols){   //òîëüêî äëÿ 2íà2 3
 			    }
 			    printf("\n");
 	            }
-	            printf("Введите элемент матрицы: ");
+	        printf("Введите элемент матрицы: ");
                 scanf("%d",&matr[i][j]);
                 system("cls");
                 }
@@ -371,7 +366,6 @@ void determinant(int **matr,int rows,int cols){   //òîëüêî äëÿ 2íà2 3
 	}	
 	}
 }
-
 //----------------------- -----------------------------
 char continues(){
     char i;
@@ -385,8 +379,8 @@ char continues(){
   }
 //---------------------------------------------------
 void inputRowsCols(int *rows,int *cols){
-  	int i;
-  		do{
+    int i;
+    do{
     printf("Введите значение количества строк: ");
     scanf("%d",rows);
     fflush(stdin);
@@ -406,8 +400,7 @@ void dinamic(int ***matr,int rows,int cols){
         *(*matr+i)=(int*)calloc(cols,sizeof(int)); 
     }
     system("cls");
-  }
-  
+  } 
 //----------------------------------------
 void outputMatrix(int **matr,int rows,int cols){
   	int i,j;
@@ -459,9 +452,9 @@ void powMatrix(int **matr,int rows,int cols){
     for(i=0;i<pow;i++){
 		for(j=0;j<rows;j++){
 			for(k=0;k<cols;k++){
-				sum=0;
-				for(l=0;l<rows;l++){
-		        sum+=matr[j][l]*res[l][k];
+			    sum=0;
+			    for(l=0;l<rows;l++){
+		                sum+=matr[j][l]*res[l][k];
 		}
 		matr1[j][k]=sum;
 		}
